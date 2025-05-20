@@ -6,16 +6,16 @@ import scan3 from '../assets/Scan3.svg';
 
 // Swiper imports
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'; // only core styles now
+import 'swiper/css'; 
 import { Autoplay } from 'swiper/modules';
 
 const Payment = () => (
-  <section className="p-2 flex flex-col  items-center justify-between">
-    <div className="">
-      <h3 className="text-[#ADF6F6] mt-10 mb-5 text-4xl font-semibold">
+  <section className="z-0 flex flex-col md:flex-row items-center justify-between md:px-8  mt-14">
+    <div className="md:w-1/2 px-4 md:px-0 ">
+      <h3 className="text-[#ADF6F6] mt-0 mb-5   md:mb-8 text-4xl font-semibold ">
         Fast, Secure & Flexible Payments
       </h3>
-      <p className="text-white font-light mb-5">
+      <p className="text-white  mb-5 leading-6">
         Pay for purchases, subscriptions, and more with ease. Now with Bitcoin support and Buy Now, Pay Later (BNPL) options, CredPal makes transactions faster, safer, and more flexible than ever, allowing you to shop now and spread payments over time with ease.
       </p>
 
@@ -36,13 +36,13 @@ const Payment = () => (
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={scan1} alt="scan and pay 1" className="w-full h-auto" />
+          <img src={scan1} alt="scan and pay 1" className="w-full h-[460px] " />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={scan2} alt="scan and pay 2" className="w-full h-auto" />
+          <img src={scan2} alt="scan and pay 2" className="w-full h-[460px] " />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={scan3} alt="scan and pay 3" className="w-full h-auto" />
+          <img src={scan3} alt="scan and pay 3" className="w-full h-[460px] " />
         </SwiperSlide>
       </Swiper>
     </div>

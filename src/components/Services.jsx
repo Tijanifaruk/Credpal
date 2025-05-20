@@ -4,14 +4,14 @@ import { services } from '../constants';
 
 const Services = () => {
   return (
-    <div className="flex flex-col gap-4 max-w-md mx-auto p-4">
+    <div className="flex flex-col gap-4 md:flex-row w-full mx-auto p-4">
       {services.map((service, index) => {
         const Icon = service.icon;
 
         return (
           <div
             key={index}
-            className={`rounded-xl py-12 px-12 ${service.bgColor} text-gray-800`}
+            className={`rounded-xl py-12 px-12 ${service.bgColor} text-gray-800 md:w-1/4`}
           >
             <div className="mb-6" style={{ color: service.iconColor }}>
               <Icon size={60} /> 

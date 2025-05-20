@@ -10,14 +10,16 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="w-full flex justify-center mt-5 fixed">
+    <div className="w-full flex justify-center mt-5 fixed z-40"> 
       {/* NAVBAR */}
-      <nav className="w-5/6 md:w-2/3 h-[60px] flex items-center justify-between 
+      <nav className="h-[60px] flex items-center justify-between 
         px-6 md:px-6 
         rounded-full 
         bg-[#383737]
         relative
-        z-50"
+        z-50
+        mx-16
+        w-full "
       >
         {/* Logo */}
         <div className="flex items-center">
@@ -25,7 +27,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-10">
+        <ul className="hidden md:flex items-center gap-5 justify-center w-2/3">
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
@@ -40,7 +42,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Flag + Button */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-2">
           <div className="flex justify-center items-center">
             <img src={flag} alt="flag" />
             <IoIosArrowDown className="text-white" />

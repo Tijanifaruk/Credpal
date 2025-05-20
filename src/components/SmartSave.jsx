@@ -3,11 +3,11 @@ import  Button from './Button';
 import savings from "../assets/SmartSave.svg"
 
 const SmartSave = () =>  (
-    <section className="p-2 flex flex-col  items-center justify-between">
+    <section className="p-4 flex flex-col md:flex-row items-center justify-between md:px-8 ">
 
-      <div>
+      <div className=' md:w-1/2 '>
       <h3 className='text-[#ADF6F6] mt-10 mb-5 text-4xl font-semibold'>Smart Saving Made Simple </h3> 
-      <p className="text-white text-light mb-5">Take control of your savings effortlessly. Set a budget, track your progress, and automate transfers, helping you reach your financial goals with ease.</p>
+      <p className="text-white  mb-5">Take control of your savings effortlessly. Set a budget, track your progress, and automate transfers, helping you reach your financial goals with ease.</p>
 
 
       <div className="mb-6">
@@ -18,7 +18,7 @@ const SmartSave = () =>  (
       
 
       <div>
-        <img src={savings} alt="saveImg" />
+        <img src={savings} alt="saveImg" className='w-full md:h-[460px] ' />
       </div>
 
     </section>

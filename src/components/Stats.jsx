@@ -3,12 +3,12 @@ import { stats } from "../constants";
 
 const Stats = () => {
   return (
-    <section className="flex justify-center gap-8 md:gap-32">
+    <section className="flex justify-center gap-x-8 md:gap-x-44">
       {stats.map((stat) => (
         <div key={stat.id} className="text-center">
           <h2 className="text-white text-2xl md:text-4xl  font-semibold uppercase mb-2">
             {stat.value.endsWith('.svg') || stat.value.endsWith('.png') ? (
-              <img src={stat.value} alt={stat.label} className="inline h-8 w-full  " />
+              <img src={stat.value} alt={stat.label} className="inline h-6 w-full  " />
             ) : (
               stat.value
             )}

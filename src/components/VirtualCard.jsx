@@ -11,9 +11,9 @@ const VirtualCard = () => {
   };
 
   return (
-    <section className="p-2 flex flex-col ">
-      {/* HEADER AND PARAGRAPH */}
-      <div className="max-w-3xl w-full ">
+    <section className="px-2 md:px-0 flex flex-col md:flex-row  justify-between md:mb-10 md:px-8">
+      {/* LEFT SIDE: Text */}
+      <div className="md:w-1/2  max-w-3xl w-full  ">
         <h2 className="text-[#ADF6F6] mt-10 mb-5 text-4xl font-semibold">Virtual Cards</h2>
         <p className="text-white text-light mb-5">
           Create a virtual credit or cash card that lets you make secure online purchases, track your spending in real time, and see exactly where your money goes, available in countries like the United States, United Kingdom, Canada, Nigeria, India, South Africa, and more. With advanced security features, you can set spending limits, control your expenses, and easily replenish your card whenever needed.
@@ -22,42 +22,43 @@ const VirtualCard = () => {
         <div className="mb-6">
           <Button />
         </div>
+      </div>
 
-{/* Toggle + Card Container */}
-<div className="bg-[#1E293B] p-2 rounded-xl shadow-md mt-6">
-  {/* Toggle Buttons */}
-  <div className="flex justify-center space-x-4 mb-6">
-    <button
-      className={`px-4 py-2 rounded-md font-medium transition ${
-        selectedCard === 'ngn' ? 'bg-blue-600 text-white' : 'bg-gray-300 text-black'
-      }`}
-      onClick={() => setSelectedCard('ngn')}
-    >
-      NGN Virtual Card
-    </button>
-    <button
-      className={`px-4 py-2 rounded-md font-medium transition ${
-        selectedCard === 'usd' ? 'bg-blue-600 text-white' : 'bg-gray-300 text-black'
-      }`}
-      onClick={() => setSelectedCard('usd')}
-    >
-      USD Virtual Card
-    </button>
-  </div>
+      {/* RIGHT SIDE: Toggle + Image */}
+      <div className="md:w-1/2 w-full flex flex-col items-center justify-center md:items-end md:justify-end mt-6 md:mt-0">
+        <div className="bg-[#b4cffa] py-8  rounded-xl shadow-md w-full max-w-md">
+          {/* Toggle Buttons */}
+          <div className="flex justify-center space-x-2 mb-6">
+            <button
+              className={`px-4 py-2 rounded-md font-medium transition ${
+                selectedCard === 'ngn' ? 'bg-blue-600 text-white' : 'bg-gray-300 text-black'
+              }`}
+              onClick={() => setSelectedCard('ngn')}
+            >
+              NGN Virtual Card
+            </button>
+            <button
+              className={`px-4 py-2 rounded-md font-medium transition ${
+                selectedCard === 'usd' ? 'bg-blue-600 text-white' : 'bg-gray-300 text-black'
+              }`}
+              onClick={() => setSelectedCard('usd')}
+            >
+              USD Virtual Card
+            </button>
+          </div>
 
-  {/* Card Image */}
-  <div className="flex justify-center">
-    <img
-      src={getCardImage()}
-      alt={`${selectedCard.toUpperCase()} Virtual Card`}
-      className="w-[360px] h-auto rounded-lg"
-    />
-  </div>
-</div>
-
+          {/* Card Image */}
+          <div className="flex justify-center">
+            <img
+              src={getCardImage()}
+              alt={`${selectedCard.toUpperCase()} Virtual Card`}
+              className="w-[360px] h-auto rounded-lg"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default VirtualCard; 
+export default VirtualCard;

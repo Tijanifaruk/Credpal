@@ -13,13 +13,14 @@ import Services from './components/Services'
 import CreditScore from './components/CreditScore'
 import Footer from "./components/Footer"
 
+import { ToastContainer } from "react-toastify";
 
 
 const App = () => {
   return (
-   <div className='bg-[#000] w-full overflow-hidden'>
+   <div className='bg-[#000] w-full overflow-hidden '>
 
-
+       <ToastContainer />
        <Navbar />
        <Hero />
        <Stats />

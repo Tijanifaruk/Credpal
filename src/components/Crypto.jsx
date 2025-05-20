@@ -3,10 +3,10 @@ import Button from './Button';
 import crypto from "../assets/Crypto.svg"
 
 const Crypto = () =>  (
-    <section className="p-2 flex flex-col  items-center justify-between">
-      <div>
+    <section className="  flex flex-col md:flex-row items-center justify-between md:pl-8">
+      <div className=' md:w-1/2'>
         <h4 className='text-[#ADF6F6] mt-10 mb-5 text-4xl font-semibold'>Live Crypto Market Updates</h4>
-        <p className="text-light text-white mb-5">
+        <p className=" text-white mb-5">
         Stay ahead with real-time Bitcoin prices, market trends, and seamless conversions. Make informed decisions before funding your wallet with CredPal.
       </p>
 
@@ -18,7 +18,7 @@ const Crypto = () =>  (
       
 
       <div>
-        <img src={crypto} alt="" />
+        <img src={crypto} alt="" className='w-full md:h-[460px]'/>
       </div>
     </section>
   )
