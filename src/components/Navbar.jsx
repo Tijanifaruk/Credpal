@@ -122,32 +122,36 @@
 // export default Navbar;
 
 
-
-
 import React, { useState } from 'react'; 
 import credpal from "../assets/Credpal.svg";
 import { navLinks } from '../constants';
 import Button from './Button';
-import flag from "../assets/NaijaFlag.svg";
+import nigeria from "../assets/NaijaFlag.svg";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
+import angola from "../assets/Angola.svg";
+import egypt from "../assets/Egypt.svg";
+import kenya from "../assets/Kenya.svg";
 
 const countries = [
-  { name: "Angola", flagSrc: "/flags/angola.svg" },  
-  { name: "Egypt", flagSrc: "/flags/egypt.svg" },
-  { name: "Kenya", flagSrc: "/flags/kenya.svg" },
+  { name: "Angola", flagSrc: angola },
+  { name: "Egypt", flagSrc: egypt },
+  { name: "Kenya", flagSrc: kenya },
+  {name :"Nigeria", flagSrc:nigeria}
 ];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showCountries, setShowCountries] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState({
+    name: "Nigeria",
+    flagSrc: nigeria,
+  });
 
-  // Toggle countries dropdown handler
   const toggleCountries = () => setShowCountries(prev => !prev);
 
   return (
     <div className="w-full flex justify-center mt-5 fixed z-40"> 
-      {/* NAVBAR */}
       <nav className="h-[60px] flex items-center justify-between 
         px-6 md:px-6 
         rounded-full 
@@ -183,7 +187,7 @@ const Navbar = () => {
             className="flex justify-center items-center cursor-pointer"
             onClick={toggleCountries}
           >
-            <img src={flag} alt="flag" />
+            <img src={selectedCountry.flagSrc} alt={`${selectedCountry.name} flag`} className="w-6 h-6" />
             <IoIosArrowDown className="text-white" />
           </div>
 
@@ -191,8 +195,14 @@ const Navbar = () => {
           {showCountries && (
             <div className="absolute top-[60px] right-0 bg-[#383737] rounded-md shadow-lg py-2 px-4 flex flex-col gap-2 w-40 z-50">
               {countries.map((country) => (
-                <div key={country.name} className="flex items-center gap-2 cursor-pointer hover:bg-gray-700 rounded-md p-1">
-                  {/* If you have actual flag images for these countries, replace src */}
+                <div 
+                  key={country.name} 
+                  className="flex items-center gap-2 cursor-pointer hover:bg-gray-700 rounded-md p-1"
+                  onClick={() => {
+                    setSelectedCountry(country);
+                    setShowCountries(false);
+                  }}
+                >
                   <img src={country.flagSrc} alt={`${country.name} flag`} className="w-5 h-5" />
                   <span className="text-white text-sm">{country.name}</span>
                 </div>
@@ -240,7 +250,7 @@ const Navbar = () => {
               </div>
             ))}
             <div className="flex items-center gap-2">
-              <img src={flag} alt="flag" className="w-6 h-6" />
+              <img src={selectedCountry.flagSrc} alt={`${selectedCountry.name} flag`} className="w-6 h-6" />
               <IoIosArrowDown className="text-white" />
             </div>
             <Button />
@@ -272,4 +282,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
