@@ -4,8 +4,8 @@ import robot from '../assets/Robot.svg';
 const Hero = () => (
   <section className=' text-white flex flex-col mt-32 md:flex-row lg:items-center md:justify-between lg:mt-12'>
     
-    <div className='text-center lg:text-left md:px-6 py-4 md:flex md:flex-col md:justify-center md:w-1/2 lg:w-1/2'>
-      <h1 className='font-poppins font-semibold text-4xl lg:text-6xl md:text-left'>
+    <div className='text-center lg:text-left md:px-6 py-4 md:flex md:flex-col md:justify-center md:w-1/2 lg:w-1/2 '>
+      <h1 className=' font-poppins font-semibold text-4xl lg:text-5xl md:text-left'>
         One App, 
         <span className='italic font-normal'>all your <br/> </span> 
         <span className='font-bold lg:tracking-tighter'>Financial Needs</span>
@@ -18,7 +18,8 @@ const Hero = () => (
     </div>
 
     <div className='md:w-1/2 lg:w-1/2'>
-      <img src={robot} alt="robot" className=''/>
+      <img src={robot} alt="robot" className='animate-gentleBounce' />
+
     </div>
 
   </section>

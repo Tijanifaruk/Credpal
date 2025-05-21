@@ -95,6 +95,7 @@ export const feedback = [
     id: "feedback-2",
     content:
       "With CredPal, I finally started building my credit score while still enjoying life. The app is smooth, flexible, and gives me total control over my money.",
+      name: "Tijani Faruk",
     title: "8pm, Lagos",
     img: people02,
   },

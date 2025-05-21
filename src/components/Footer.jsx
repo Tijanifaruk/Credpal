@@ -20,8 +20,20 @@ const Footer = () => (
       <div>
         <p className="text-teal-400 font-semibold mb-2">Get The App</p>
         <div className="flex flex-col gap-2 cursor-pointer">
-          <img src={appstore} alt="App Store" className="w-32" />
-          <img src={googleplay} alt="Google Play" className="w-32" />
+          <a
+            href="https://apps.apple.com/us/app/credpal/id1541846382"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={appstore} alt="Download on the App Store" className="w-32" />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.credpal.loan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={googleplay} alt="Get it on Google Play" className="w-32" />
+          </a>
         </div>
       </div>
 
@@ -32,7 +44,7 @@ const Footer = () => (
           <ul className="space-y-1 text-gray-300 text-sm">
             {section.links.map((link) => (
               <li key={link.name} className="list-disc ml-5">
-                <a href={link.link} className="  hover:underline decoration-teal-200">
+                <a href={link.link} className="hover:underline decoration-teal-200">
                   {link.name}
                 </a>
               </li>

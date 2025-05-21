@@ -4,9 +4,9 @@ import CreditRate from "../assets/CreditRate.svg"
 
 
 const CreditScore = () => (
-    <section className="p-2 md:px-8 flex flex-col md:flex-row items-center justify-between border border-white">
+    <section className="p-2 md:px-8 flex flex-col md:flex-row items-center justify-between ">
        
-       <div className='md:w-1/2 '>
+       <div className='px-4 md:px-0 md:w-1/2 '>
         <h4 className='text-[#ADF6F6] mt-10 mb-5 text-4xl font-semibold'>Build Credit While You Spend</h4>
         <p className="text-white text-light mb-5">Fund your CredPal virtual card and enjoy seamless payments anywhere, online or offline. Every transaction helps grow your credit profile while unlocking exciting rewards and benefits.</p>
 

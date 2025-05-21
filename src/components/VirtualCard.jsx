@@ -13,7 +13,7 @@ const VirtualCard = () => {
   return (
     <section className="px-2 md:px-0 flex flex-col md:flex-row  justify-between md:mb-10 md:px-8">
       {/* LEFT SIDE: Text */}
-      <div className="md:w-1/2  max-w-3xl w-full  ">
+      <div className="px-4 md:px-0 md:w-1/2  max-w-3xl w-full  ">
         <h2 className="text-[#ADF6F6] mt-10 mb-5 text-4xl font-semibold">Virtual Cards</h2>
         <p className="text-white text-light mb-5">
           Create a virtual credit or cash card that lets you make secure online purchases, track your spending in real time, and see exactly where your money goes, available in countries like the United States, United Kingdom, Canada, Nigeria, India, South Africa, and more. With advanced security features, you can set spending limits, control your expenses, and easily replenish your card whenever needed.
