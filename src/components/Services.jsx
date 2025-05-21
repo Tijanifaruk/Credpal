@@ -35,7 +35,7 @@ const ServiceCard = ({ service, index }) => {
 // Main Services Component
 const Services = () => {
   return (
-    <div className="flex flex-col gap-4 md:flex-row flex-wrap justify-center w-full mx-auto p-4">
+    <div className="flex flex-col gap-4 md:flex-row  justify-center w-full mx-auto p-4">
       {services.map((service, index) => (
         <ServiceCard key={index} service={service} index={index} />
       ))}
@@ -44,3 +44,5 @@ const Services = () => {
 }
 
 export default Services
+
+
