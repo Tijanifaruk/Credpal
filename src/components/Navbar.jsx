@@ -133,8 +133,8 @@ const Navbar = () => {
                 key={nav.id}
                 className="text-white text-lg font-semibold flex items-center gap-2"
               >
-                {index === 0 && <IoIosArrowDown />}
                 {nav.title}
+                {index === 0 && <IoIosArrowDown />}
               </div>
             ))}
             

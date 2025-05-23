@@ -10,7 +10,7 @@ import people03 from '../assets/people03.svg'
 import { FaCarAlt, FaSuitcase, FaWallet, FaShoppingBag } from 'react-icons/fa';
 
 
-
+// Footer Links
 export const footerLinks = [
   {
     title: "Products",
@@ -44,6 +44,13 @@ export const footerLinks = [
     ],
   },
 ];
+
+
+
+
+
+
+// Services 
 
 export const services = [
   {
@@ -82,6 +89,11 @@ export const services = [
 
 
 
+
+
+
+
+
 export const feedback = [
   {
     id: "feedback-1",
@@ -108,6 +120,10 @@ export const feedback = [
     img: people03,
   },
 ];
+
+
+
+
 
 export const cards = [
   {
@@ -167,6 +183,9 @@ export const stats= [
   },
 ];
 
+
+
+// NAVLINKS
 export const navLinks = [
   {
     id: "product",
