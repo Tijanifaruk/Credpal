@@ -14,11 +14,13 @@ import CreditScore from './components/CreditScore'
 import Footer from "./components/Footer"
 
 import { ToastContainer } from "react-toastify";
+import Credbg from "../src/assets/Credbg.svg"
 
 
 const App = () => {
   return (
-   <div className='bg-[#000] w-full overflow-hidden '>
+   <div className=' w-full overflow-hidden '
+   style={{ backgroundImage: `url(${Credbg})` }}>
 
        <ToastContainer />
        <Navbar />
